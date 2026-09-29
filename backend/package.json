@@ -1,12 +1,12 @@
 {
   "name": "tatame-bjj-backend",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "node --watch src/index.js",
-    "db:schema": "node src/db/run-schema.js",
     "db:seed": "node src/db/seed.js"
   },
   "dependencies": {
