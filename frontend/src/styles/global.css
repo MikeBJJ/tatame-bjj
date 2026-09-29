@@ -1,0 +1,85 @@
+:root {
+  --primary: #e94560;
+  --secondary: #f9c80e;
+  --bg: #1a1a2e;
+  --card: #16213e;
+  --card2: #1f2a4a;
+  --text: #e6e6f0;
+  --muted: #9aa0b8;
+  --border: #2a3556;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app { display: flex; min-height: 100vh; }
+
+.sidebar {
+  width: 240px;
+  background: var(--card);
+  border-right: 1px solid var(--border);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar .brand { font-weight: 800; font-size: 18px; }
+
+.sidebar nav { display: flex; flex-direction: column; gap: 6px; flex: 1; }
+
+.sidebar nav button {
+  background: none;
+  border: none;
+  color: var(--muted);
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sidebar nav button:hover { background: rgba(233, 69, 96, 0.15); color: var(--text); }
+
+.sidebar-foot { border-top: 1px solid var(--border); padding-top: 12px; font-size: 13px; display: flex; flex-direction: column; gap: 6px; }
+
+.main { flex: 1; padding: 24px; }
+
+.login-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+
+.login-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-card h1 { text-align: center; }
+.login-card p { text-align: center; color: var(--muted); font-size: 13px; }
+
+.login-card input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card2);
+  color: var(--text);
+}
+
+.btn { padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.alert { padding: 10px 12px; border-radius: 8px; font-size: 13px; }
+.alert-danger { background: rgba(233, 69, 96, 0.15); color: #f08a9c; }
+
+.login-hint { font-size: 12px; color: var(--muted); background: var(--card2); padding: 10px; border-radius: 8px; line-height: 1.6; }
